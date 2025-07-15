@@ -1,0 +1,302 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "whois",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "whois",
+        "description": "whois",
+        "detail": "whois",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "SequenceMatcher",
+        "importPath": "difflib",
+        "description": "difflib",
+        "isExtraImport": true,
+        "detail": "difflib",
+        "documentation": {}
+    },
+    {
+        "label": "ipaddress",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ipaddress",
+        "description": "ipaddress",
+        "detail": "ipaddress",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "node_modules.flatted.python.flatted",
+        "description": "node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "node_modules.flatted.python.flatted",
+        "description": "node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "node_modules.flatted.python.flatted",
+        "description": "node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "node_modules.flatted.python.flatted",
+        "description": "node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "get_days_between_dates",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def get_days_between_dates(start, end):\n    if isinstance(start, list): start = start[0]\n    if isinstance(end, list): end = end[0]\n    if isinstance(start, datetime.datetime) and isinstance(end, datetime.datetime):\n        return (end - start).days\n    return 365\ndef is_typosquatting_or_abuse(domain):\n    domain = domain.lower().replace(\"www.\", \"\")\n    try:\n        domain.encode('ascii')",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "is_typosquatting_or_abuse",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def is_typosquatting_or_abuse(domain):\n    domain = domain.lower().replace(\"www.\", \"\")\n    try:\n        domain.encode('ascii')\n    except UnicodeEncodeError:\n        return True\n    for part in domain.split('.'):\n        for brand in trusted_brands:\n            similarity = SequenceMatcher(None, part, brand).ratio()\n            if similarity > 0.8 and part != brand:",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "contains_numeric_typo",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def contains_numeric_typo(text):\n    return any(d in text for d in ['0', '1', '5'])\ndef is_unusual_subdomain(domain):\n    return any(domain.startswith(prefix + \".\") for prefix in ['wwww', 'www1', 'ww2', 'ww'])\ndef is_safe_local_ip(domain):\n    try:\n        ip = ipaddress.ip_address(domain)\n        return ip.is_private\n    except ValueError:\n        return domain in ['localhost']",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "is_unusual_subdomain",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def is_unusual_subdomain(domain):\n    return any(domain.startswith(prefix + \".\") for prefix in ['wwww', 'www1', 'ww2', 'ww'])\ndef is_safe_local_ip(domain):\n    try:\n        ip = ipaddress.ip_address(domain)\n        return ip.is_private\n    except ValueError:\n        return domain in ['localhost']\ndef extract_structural_features(url):\n    features = {}",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "is_safe_local_ip",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def is_safe_local_ip(domain):\n    try:\n        ip = ipaddress.ip_address(domain)\n        return ip.is_private\n    except ValueError:\n        return domain in ['localhost']\ndef extract_structural_features(url):\n    features = {}\n    ip_pattern = re.compile(r\"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}\"\n                            r\"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\")",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "extract_structural_features",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def extract_structural_features(url):\n    features = {}\n    ip_pattern = re.compile(r\"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}\"\n                            r\"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\")\n    features['use_of_ip'] = 1 if ip_pattern.search(url) else 0\n    features['url_length'] = len(url)\n    features['short_url'] = 1 if re.search(r\"(bit\\.ly|goo\\.gl|tinyurl|is\\.gd|ow\\.ly|t\\.co|buff\\.ly)\", url) else 0\n    features['at_symbol'] = 1 if '@' in url else 0\n    features['double_slash'] = 1 if url.count('//') > 1 else 0\n    domain = urlparse(url).netloc",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "extract_keyword_features",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def extract_keyword_features(url):\n    url = url.lower()\n    keyword_feats = {}\n    for word in phishing_keywords:\n        fname = f\"has_{word.replace('.', '_')}\"\n        keyword_feats[fname] = 1 if word in url else 0\n    return keyword_feats\n@app.route('/')\ndef home():\n    return \"✅ Phishing Detector API running\"",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def home():\n    return \"✅ Phishing Detector API running\"\n@app.route('/check', methods=['POST'])\ndef check_url():\n    try:\n        data = request.json\n        url = data.get('url')\n        if not url:\n            return jsonify({'error': 'No URL provided'}), 400\n        if not url.lower().startswith((\"http://\", \"https://\")):",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "check_url",
+        "kind": 2,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "def check_url():\n    try:\n        data = request.json\n        url = data.get('url')\n        if not url:\n            return jsonify({'error': 'No URL provided'}), 400\n        if not url.lower().startswith((\"http://\", \"https://\")):\n            return jsonify({'url': url, 'is_phishing': True, 'probability': 0.99, 'manual_override': True,\n                            'reason': '❌ Malformed URL: Invalid protocol',\n                            'timestamp': datetime.datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")})",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\nmodel = joblib.load('phishing_model_53.pkl')\nscaler = joblib.load('scaler_53.pkl')\n# ✅ Your full whitelist_domains goes here (shortened for brevity)\nwhitelist_domains = [\n    'gov.rw', 'rbc.gov.rw', 'rra.gov.rw', 'reb.rw', 'ur.ac.rw', 'rssb.rw',\n    'igihe.com', 'newtimes.co.rw', 'rwandainvest.com', 'agasobanuye.com',\n    'nsabicomedy.rw', 'psf.org.rw',\n     # ===== GOVERNMENT INSTITUTIONS (40+) =====",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "model = joblib.load('phishing_model_53.pkl')\nscaler = joblib.load('scaler_53.pkl')\n# ✅ Your full whitelist_domains goes here (shortened for brevity)\nwhitelist_domains = [\n    'gov.rw', 'rbc.gov.rw', 'rra.gov.rw', 'reb.rw', 'ur.ac.rw', 'rssb.rw',\n    'igihe.com', 'newtimes.co.rw', 'rwandainvest.com', 'agasobanuye.com',\n    'nsabicomedy.rw', 'psf.org.rw',\n     # ===== GOVERNMENT INSTITUTIONS (40+) =====\n    'primature.gov.rw',\n    'minaffet.gov.rw',",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "scaler",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "scaler = joblib.load('scaler_53.pkl')\n# ✅ Your full whitelist_domains goes here (shortened for brevity)\nwhitelist_domains = [\n    'gov.rw', 'rbc.gov.rw', 'rra.gov.rw', 'reb.rw', 'ur.ac.rw', 'rssb.rw',\n    'igihe.com', 'newtimes.co.rw', 'rwandainvest.com', 'agasobanuye.com',\n    'nsabicomedy.rw', 'psf.org.rw',\n     # ===== GOVERNMENT INSTITUTIONS (40+) =====\n    'primature.gov.rw',\n    'minaffet.gov.rw',\n    'minecofin.gov.rw',",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "whitelist_domains",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "whitelist_domains = [\n    'gov.rw', 'rbc.gov.rw', 'rra.gov.rw', 'reb.rw', 'ur.ac.rw', 'rssb.rw',\n    'igihe.com', 'newtimes.co.rw', 'rwandainvest.com', 'agasobanuye.com',\n    'nsabicomedy.rw', 'psf.org.rw',\n     # ===== GOVERNMENT INSTITUTIONS (40+) =====\n    'primature.gov.rw',\n    'minaffet.gov.rw',\n    'minecofin.gov.rw',\n    'mineduc.gov.rw',\n    'moh.gov.rw',",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "phishing_keywords",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "phishing_keywords = [\n    'account', 'alert', 'bank', 'billing', 'bit.ly', 'buff.ly', 'check', 'confirm', 'edu',\n    'facebook', 'free', 'github', 'goo.gl', 'google', 'gov.rw', 'important', 'is.gd', 'login',\n    'nirda', 'org', 'ow.ly', 'password', 'payment', 'rbc', 'secure', 'security', 'signin',\n    'support', 't.co', 'tinyurl', 'unlock', 'update', 'user', 'validate', 'verify', 'webmail',\n    'wikipedia', 'win'\n]\ntrusted_brands = [\n    'google', 'paypal', 'facebook', 'yahoo', 'amazon', 'mtn', 'airtel',\n    'irembo', 'rbc', 'hec', 'gov.rw', 'reb', 'rssb', 'bankofamerica'",
+        "detail": "src.app",
+        "documentation": {}
+    },
+    {
+        "label": "trusted_brands",
+        "kind": 5,
+        "importPath": "src.app",
+        "description": "src.app",
+        "peekOfCode": "trusted_brands = [\n    'google', 'paypal', 'facebook', 'yahoo', 'amazon', 'mtn', 'airtel',\n    'irembo', 'rbc', 'hec', 'gov.rw', 'reb', 'rssb', 'bankofamerica'\n]\ndef get_days_between_dates(start, end):\n    if isinstance(start, list): start = start[0]\n    if isinstance(end, list): end = end[0]\n    if isinstance(start, datetime.datetime) and isinstance(end, datetime.datetime):\n        return (end - start).days\n    return 365",
+        "detail": "src.app",
+        "documentation": {}
+    }
+]
