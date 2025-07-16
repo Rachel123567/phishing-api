@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.05643d2a.css",
+    "main.js": "./static/js/main.249840eb.js",
+    "static/js/453.009fa1b4.chunk.js": "./static/js/453.009fa1b4.chunk.js",
+    "static/media/rp-logo.png": "./static/media/rp-logo.acbedf0dde88f8c64f5a.png",
+    "index.html": "./index.html",
+    "main.05643d2a.css.map": "./static/css/main.05643d2a.css.map",
+    "main.249840eb.js.map": "./static/js/main.249840eb.js.map",
+    "453.009fa1b4.chunk.js.map": "./static/js/453.009fa1b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05643d2a.css",
+    "static/js/main.249840eb.js"
+  ]
+}
