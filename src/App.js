@@ -10,7 +10,7 @@ function App() {
       <div className="app">
         <Navbar />
         <Routes>
-           <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/recent" element={<RecentChecks />} />
@@ -57,7 +57,11 @@ function Home() {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/check', { url });
+      const response = await axios.post(
+        'https://phishing-api-mb1j.onrender.com/predict',
+        { url: url },
+        { headers: { 'Content-Type': 'application/json' } }
+      );
 
       if (response.data.error) {
         throw new Error(response.data.error);
@@ -159,9 +163,7 @@ function About() {
   return (
     <div className="page">
       <h2>About the Phishing Detection System</h2>
-      <p>
-        This responsive web application is built to help individuals and Rwandan institutions detect phishing websites.
-      </p>
+      <p>This responsive web application is built to help individuals and Rwandan institutions detect phishing websites.</p>
       <p>
         It uses a hybrid detection system combining:
         <ul>
@@ -181,9 +183,7 @@ function Contact() {
   return (
     <div className="page">
       <h2>Contact Us</h2>
-      <p>
-        If you have questions or suggestions, feel free to get in touch.
-      </p>
+      <p>If you have questions or suggestions, feel free to get in touch.</p>
       <div style={{ marginTop: '1.5rem' }}>
         <h4>📞 Phone</h4>
         <p><a href="tel:+250789246013">+250 789 246 013</a></p>
